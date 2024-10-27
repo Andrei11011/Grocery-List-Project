@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    margin: 0;
+}
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 40px;
+    box-shadow: 10px 5px 5px purple;
+    margin-top: 200px;
+    min-width: 700px;
+}
+
+.question-container-header {
+    color: black;
+    border: 2px solid purple;
+    margin: 10px 20px;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff45f7;
+    color: white;
+}
+
+
+.add-btn {
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    width: 88%;
+}
+
+.add-btn:hover {
+    background-color: #ff45f7;
+    color: white;
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #ff45f7;
+    color: white;
+}
+
+h1 {
+    border: 2px solid purple;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+.purchased {
+    text-decoration: line-through red;
+}
+
+.btn-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}

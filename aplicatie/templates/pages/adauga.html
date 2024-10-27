@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adauga</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'aplicatie/adauga.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add an item</h1>
+        <div class="form-container">
+            <form method="POST">
+                {% csrf_token %}
+                <label for="nume">Nume</label>
+                <input type="text" id="nume" name="nume" required>
+
+                <button type="submit" class="btn">Add Item</button>
+            </form>
+        </div>
+        <button type="submit" class="back-btn">
+            <a href="/">Back</a>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'aplicatie/shopping_list.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>This is the shopping list</h1>
+
+        <div class="question-container-header">
+        <ul>
+            {% for produs in produse %}
+                <li>
+                    <span class="{% if produs.cumparat %}purchased{% endif %}">
+                        {{ produs.nume }}
+                    </span>
+                    <form action="{% url 'cumpara' produs.id %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn"
+                                {% if produs.cumparat %}
+                                disabled class="btn-disabled"
+                                {% endif %}>
+                            Buy
+                        </button>
+                    </form>
+                    <form action="{% url 'sterge' produs.id %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="remove-btn">Remove</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
+
+        <a href="/adauga" class="add-btn">Add Item</a>
+    </div>
+
+</body>
+</html>
